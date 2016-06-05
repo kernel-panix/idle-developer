@@ -1,0 +1,131 @@
+<html>
+<head>
+	<script src="http://connect.soundcloud.com/sdk.js"></script>
+	<script src="scripts/main.js"></script>
+	<link rel="stylesheet" href="style/global.css">
+</head>
+<body>
+<div id="header">
+    
+<h1>Idle Developer</h1>
+
+<span class="save-status"></span>
+
+</div>
+<div>
+    <ul class="tabbed">
+        <li><a class="active">Play</a>
+
+        </li>
+        <li><a>Managers</a>
+
+        </li>
+        <li><a>Powerups</a>
+
+        </li>
+        <li><a>Options</a>
+
+        </li>
+        <li><a>Info</a>
+
+        </li>
+    </ul>
+</div>
+<div id="tabs-container">
+    <div id="playarea" class="active">
+         <h2></h2>
+
+        <div id="buy-more">
+            <button id="buyx1" class="active">x1</button>
+            <button id="buyx10">x10</button>
+            <button id="buyx100">x100</button>
+        </div>
+        <!-- <span class="alerts"><p><strong>Tutorial:</strong> Click on your personal blog to get the money from it!</p></span>
+     --> <span id="score-display"><b>Total Score: </b><span id="payout">0</span></span>
+        <div id="workers">
+            <div class="col1"></div>
+            <div class="col2"></div>
+        </div>
+    </div>
+    <div id="managers">
+         <h2>Powerups: Managers</h2>
+
+    </div>
+    <div id="powerups">
+         <h2>Powerups: Bonuses</h2> 
+    </div>
+    <div id="stats"></div>
+    <div id="achievements"></div>
+    <div id="options">
+        
+<h2>Game Options</h2>
+
+         <h3>Sound Options</h3>
+
+        <div id="sound-options" class="middle">
+            <button id="toggle-music">Mute</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="middle"><strong>Volume:</strong>
+
+                <input id="vol-control" type="range" min="0" max="100" step="1"><span></span>
+                </div> <!-- /.middle -->
+            </div><!-- /#sound-options -->
+         <h3>Game Data</h3>
+            <div id="statistics">
+                <h4>Session Statistics</h4>
+                <div id="current-daemons"><strong>Current Daemons: </strong><span class="daemons"></span></div>
+                <div id="this-session">
+                </div>
+                <h4>All Time Statistics</h4>
+                <div id="alltime">
+                </div>
+            </div>
+            <br><br>
+ <span id="save-game"><button>Save Now</button><p>This game auto-saves once a minute, but we offer manual saves for emergencies and testing purposes.</p></span>
+                <span id="soft-reset"><button>Soft Reset</button><p>Reset all game data except your All Time stats. Resetting will earn you <span id="reset-daemons"></span> daemons.</p><p>Daemons provide a passive 0.1% bonus to all earnings.</p></span>
+ <span id="reset"><button>Hard Reset</button><p class="warning">This will delete all current and saved game data. You have been warned.</p></span>
+
+        <br>
+        <br><span class="save-status"></span>
+
+    </div>
+    <div id="info">
+        <p>This is a simple skeleton for an idle game. Everything within this game works more-or-less asynchronously.</p>
+<b>Current Features</b>
+
+        <ul>
+            <li>All timers work asynchronously.</li>
+            <li>Auto-saves every minute and auto-loads utilizing localStorage. (With manual save option.)</li>
+            <li>Over 200 achievements and 25 buyable upgrades and growing.</li>
+            <li>Soft resets with software daemon profit boosters for every 4 billion or so you earn, but becomes progressively harder.</li>
+            <li>Display numbers properly formatted using toLocaleString() enabling localization options for the future.</li>
+            <li>Bonuses for buying multiples of things. For example, buying 10 Smallest will double its speed and again when you have at least 25.</li>
+            <li>Manual click mining with automation option.</li>
+            <li>Manual hard reset.</li>
+            <li>Auto-gains for a "manager" power-up.</li>
+            <li>Manual saving functionality and saves on item buying.</li>
+            <li>Proper buyable powerups.</li>
+            <li>The ability to buy in multiples.</li>
+            <li>Tabbed layout.</li>
+            <li>Payout per cycle display.</li>
+            <li>Separation of worker buy buttons and current price.</li>
+            <li>SoundCloud API integration</li>
+        </ul>
+<b>TODO / Pending Features</b>
+
+        <ul>
+           <li>Achievements tab. Will replace info tab and info tab contents will be moved to be below all other content under options.</li>
+            <li>Full new game tutorial and tips system. (Will not trigger on soft resets.)</li>
+            <li>Full set of bonuses and powerups for each worker.</li>
+            <li>Saving and loading of only relevant/dynamic object data to optimize utilization of local storage space.</li>
+            <li>Some graphical upgrades, likely with some type of 8bit style.</li>
+        </ul>
+        <p>Currently working on , full breadth of power-ups. -- 12/3/2014</p>
+         <h3>Rights &amp; Re-use</h3>
+
+        <p>All code produced by and &copy; 2014 <a href="http://www.shawnsolomon.com/">Shawn Solomon</a> is available for reuse under the <a href="http://opensource.org/licenses/MIT">MIT Licensing</a> scheme for reuse with acknowledgement of original holder's rights.</p>
+        <p>Background music <a href="https://soundcloud.com/alexander-mote/acids-and-basses">"Acids and Bases" by Alexander Mote</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Licence v3.0</a>. Streaming of this track is brought to you by <a href="https://soundcloud.com/">SoundCloud.com</a>'s JavaScript HTTP API which utilizes the SoundManager2 library.</p>
+    </div>
+</div>
+</body>
+</html>
+<!-- /#tabs-container -->
